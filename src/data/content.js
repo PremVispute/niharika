@@ -71,13 +71,13 @@ export const reasons = [
 export const photos = [
   { id: 1, src: "/img/1.png", alt: "Our first selfie together", emoji: "📸" },
   { id: 2, src: "/img/2.png", alt: "That sunset we watched", emoji: "🌅" },
-  { id: 3, src: "/img/3.png", alt: "Silly faces", emoji: "😜" },
-  { id: 4, src: "/img/4.png", alt: "Our favourite spot", emoji: "🌸" },
+  { id: 3, src: "/img/4.png", alt: "Our favourite spot", emoji: "🌸" },
+  { id: 4, src: "/img/9.png", alt: "A perfect moment", emoji: "✨" },
   { id: 5, src: "/img/5.png", alt: "A cozy day in Mumbai", emoji: "🏠" },
   { id: 6, src: "/img/6.png", alt: "Adventure together", emoji: "🌍" },
   { id: 7, src: "/img/7.png", alt: "You being adorable", emoji: "🥰" },
   { id: 8, src: "/img/8.png", alt: "Us laughing", emoji: "😂" },
-  { id: 9, src: "/img/9.png", alt: "A perfect moment", emoji: "✨" },
+  { id: 9, src: "/img/3.png", alt: "Silly faces", emoji: "😜" },
 ];
 
 export const loveLetter = {
