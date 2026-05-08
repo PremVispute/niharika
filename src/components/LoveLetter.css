@@ -1,0 +1,131 @@
+.letter {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(180deg, var(--soft-white) 0%, var(--lavender-light) 40%, var(--cream) 100%);
+}
+
+.letter__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Paper */
+.letter__paper {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  background: #FFFEF8;
+  border-radius: 4px;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.06),
+    0 8px 24px rgba(201, 177, 255, 0.2),
+    0 24px 60px rgba(255, 183, 197, 0.15),
+    inset 0 0 0 1px rgba(0,0,0,0.04);
+  padding: 3.5rem 3rem 3rem;
+  overflow: hidden;
+}
+
+/* Tape decorations */
+.letter__tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 80px;
+  height: 28px;
+  background: rgba(255, 183, 197, 0.6);
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(255, 133, 161, 0.2);
+}
+.letter__tape--bottom {
+  top: auto;
+  bottom: -12px;
+  transform: translateX(-50%) rotate(2deg);
+  background: rgba(201, 177, 255, 0.6);
+}
+
+/* Lined paper effect */
+.letter__lines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    rgba(201, 177, 255, 0.15) 31px,
+    rgba(201, 177, 255, 0.15) 32px
+  );
+  pointer-events: none;
+}
+
+/* Red margin line */
+.letter__paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 68px;
+  width: 1.5px;
+  background: rgba(255, 183, 197, 0.5);
+}
+
+.letter__content {
+  position: relative;
+  z-index: 1;
+}
+
+.letter__salutation {
+  font-family: var(--font-handwritten);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--rose);
+  margin-bottom: 1.5rem;
+}
+
+.letter__paragraph {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--text-dark);
+  margin-bottom: 1.2rem;
+}
+
+.letter__closing {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+.letter__closing-text {
+  font-family: var(--font-handwritten);
+  font-size: 1.1rem;
+  color: var(--text-medium);
+}
+.letter__signature {
+  font-family: var(--font-handwritten);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--rose);
+  animation: sway 4s ease-in-out infinite;
+  transform-origin: bottom left;
+}
+
+.letter__hearts {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.5rem;
+  animation: heartBeat 2s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .letter__paper {
+    padding: 3rem 1.5rem 2.5rem;
+  }
+  .letter__paper::before {
+    display: none;
+  }
+  .letter__paragraph {
+    font-size: 0.95rem;
+  }
+}

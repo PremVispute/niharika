@@ -1,0 +1,41 @@
+/* =============================================
+   APP.CSS — Layout & Nav Dots
+   ============================================= */
+
+main {
+  position: relative;
+}
+
+/* Side navigation dots */
+.nav-dots {
+  position: fixed;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.nav-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 133, 161, 0.35);
+  border: 2px solid rgba(255, 133, 161, 0.6);
+  transition: transform var(--transition), background var(--transition);
+  text-decoration: none;
+}
+.nav-dot:hover {
+  transform: scale(1.5);
+  background: var(--rose);
+  border-color: var(--rose);
+}
+
+@media (max-width: 640px) {
+  .nav-dots {
+    display: none;
+  }
+}

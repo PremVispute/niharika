@@ -1,0 +1,35 @@
+.footer {
+  padding: 3rem 1.5rem;
+  background: linear-gradient(135deg, #FFD6DF, #E8DEFF);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer__hearts {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+.footer__hearts span {
+  animation: heartBeat 2s ease-in-out infinite;
+}
+.footer__hearts span:nth-child(2) { animation-delay: 0.4s; }
+.footer__hearts span:nth-child(3) { animation-delay: 0.8s; }
+
+.footer__message {
+  font-family: var(--font-handwritten);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.footer__copy {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}

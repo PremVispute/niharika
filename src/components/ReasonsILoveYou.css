@@ -1,0 +1,120 @@
+.reasons {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(180deg, var(--soft-white) 0%, #FFF0F5 50%, var(--soft-white) 100%);
+}
+
+.reasons__header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+/* Grid */
+.reasons__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Flip wrapper (provides perspective) */
+.flip-wrapper {
+  perspective: 1000px;
+  height: 200px;
+}
+
+/* Flip card container */
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+}
+
+.flip-card:hover,
+.flip-card--flipped {
+  transform: rotateY(180deg);
+}
+
+/* Both faces */
+.flip-card__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 1rem;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+/* Front face */
+.flip-card__front {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 183, 197, 0.4);
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow var(--transition);
+}
+.flip-card:hover .flip-card__front,
+.flip-card--flipped .flip-card__front {
+  box-shadow: var(--shadow-medium);
+}
+
+.flip-card__emoji {
+  font-size: 2.5rem;
+  animation: pulse 3s ease-in-out infinite;
+}
+.flip-card__front-text {
+  font-family: var(--font-handwritten);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.flip-card__hint {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-top: 0.25rem;
+}
+
+/* Back face */
+.flip-card__back {
+  background: linear-gradient(135deg, #FF85A1, #C9B1FF);
+  transform: rotateY(180deg);
+  box-shadow: var(--shadow-medium);
+}
+
+.flip-card__back-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: white;
+  line-height: 1.6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.flip-card__back-icon {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+@media (max-width: 480px) {
+  .reasons__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .flip-wrapper {
+    height: 185px;
+  }
+  .flip-card__back-text {
+    font-size: 0.82rem;
+  }
+}

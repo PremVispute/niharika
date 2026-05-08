@@ -1,0 +1,66 @@
+.music-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.1rem 0.6rem 0.8rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 183, 197, 0.5);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(255, 133, 161, 0.25);
+  transition: all var(--transition);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-medium);
+  overflow: visible;
+}
+.music-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 133, 161, 0.4);
+  border-color: rgba(255, 133, 161, 0.7);
+}
+.music-toggle--playing {
+  background: linear-gradient(135deg, rgba(255,214,223,0.95), rgba(232,222,255,0.95));
+}
+
+.music-toggle__icon {
+  font-size: 1.1rem;
+  animation: none;
+}
+.music-toggle--playing .music-toggle__icon {
+  animation: sway 0.8s ease-in-out infinite;
+}
+
+.music-toggle__label {
+  color: var(--text-medium);
+}
+
+/* Pulsing ring */
+.music-toggle__pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 133, 161, 0.5);
+  animation: pulseRing 1.5s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseRing {
+  0%   { transform: scale(1);    opacity: 0.8; }
+  100% { transform: scale(1.15); opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .music-toggle {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.9rem 0.5rem 0.7rem;
+    font-size: 0.78rem;
+  }
+}
