@@ -28,7 +28,7 @@ export const storyMilestones = [
   },
   {
     id: 3,
-    emoji: "💑",
+    emoji: "💪",
     date: "",
     title: "Serious One",
     description:
@@ -36,7 +36,7 @@ export const storyMilestones = [
   },
   {
     id: 4,
-    emoji: "🌙",
+    emoji: "👨‍👩",
     date: "",
     title: "Family Man",
     description:
@@ -45,7 +45,7 @@ export const storyMilestones = [
  
   {
     id: 5,
-    emoji: "🌈",
+    emoji: "💑",
     date: "",
     title: "Our Special Bond",
     description:
