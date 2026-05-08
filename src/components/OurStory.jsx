@@ -20,8 +20,8 @@ export default function OurStory() {
         transition={{ duration: 0.7 }}
       >
         <span className="section-tag">✨ Chapter One ✨</span>
-        <h2 className="section-title">Our Story</h2>
-        <p className="section-subtitle">Every moment that made us, <em>us</em>.</p>
+        <h2 className="section-title">Your Story</h2>
+        <p className="section-subtitle">Every moment that made You.</p>
       </motion.div>
 
       <div className="story__timeline">
